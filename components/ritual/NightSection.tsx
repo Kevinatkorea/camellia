@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { imgSrc } from "@/lib/image-path";
+import ImageSlider from "@/components/ui/ImageSlider";
 
 export default function NightSection() {
   return (
@@ -12,7 +11,12 @@ export default function NightSection() {
           {/* Image placeholder — left 60% */}
           <AnimatedSection className="order-2 md:order-1">
             <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <Image src={imgSrc("/images/ritual/model-neck-ritual.webp")} alt="HOT 괄사 나이트 리추얼" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+              <ImageSlider
+                images={["/images/ritual/model-neck-ritual.webp", "/images/ritual/model-shoulder.webp", "/images/story/silhouette.webp"]}
+                alt="HOT 괄사 나이트 리추얼"
+                className="absolute inset-0"
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
             </div>
           </AnimatedSection>
 
@@ -26,9 +30,30 @@ export default function NightSection() {
                 밤을 다독이는 따뜻한 위로
               </h3>
               <p className="font-sans text-base leading-body-kr text-brand-body">
-                HOT 괄사를 전자레인지 30초 가열 후 사용합니다. 근육의 긴장을
-                녹이고 스킨케어 흡수를 돕습니다.
+                하루의 긴장이 쌓인 저녁, HOT 괄사의 따뜻한 온기가 근육을 이완시키고
+                혈액순환을 촉진합니다. 세럼이나 크림을 도포한 후 사용하면
+                온열 효과로 유효 성분의 피부 흡수율이 높아지며,
+                페이스라인을 따라 부드럽게 마사지하면 하루의 피로가 녹아내립니다.
               </p>
+
+              <ul className="mt-5 space-y-2">
+                <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
+                  <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
+                  전자레인지 30초로 간편하게 가열
+                </li>
+                <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
+                  <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
+                  혈액순환 촉진 & 근육 이완
+                </li>
+                <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
+                  <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
+                  스킨케어 유효 성분 흡수율 증가
+                </li>
+                <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
+                  <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
+                  저녁 스킨케어 루틴의 마지막 단계로 최적
+                </li>
+              </ul>
             </div>
           </AnimatedSection>
         </div>
