@@ -44,7 +44,7 @@ export default function ProcessTimeline() {
           <div className="hidden md:block absolute top-1.5 left-[10%] right-[10%] border-t border-brand-gold/30" />
 
           {/* Steps */}
-          <div className="flex flex-col md:flex-row items-start justify-between gap-10 md:gap-4">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-4">
             {processSteps.map((step, index) => (
               <AnimatedSection
                 key={step.label}
