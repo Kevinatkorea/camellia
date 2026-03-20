@@ -31,7 +31,7 @@ export default function ProductTeaser() {
 
           <p className="font-sans text-brand-body leading-body-kr mt-6 md:mt-8">
             일반 도자기보다 250°C 높은 1,250°C에서 소성한 까멜리아 도자기 괄사입니다.
-            높은 소성 온도가 만들어낸 치밀한 조직 덕분에 냉기와 온기를 48시간 이상 유지하며,
+            높은 소성 온도가 만들어낸 치밀한 조직 덕분에 냉기와 온기를 20분 이상 유지하며,
             비다공성 표면으로 세균 번식 없이 위생적으로 사용할 수 있습니다.
             핫 & 쿨 1쌍 세트로 아침과 저녁, 5분 온도 리추얼을 시작하세요.
           </p>
@@ -39,7 +39,7 @@ export default function ProductTeaser() {
           <ul className="mt-6 space-y-2">
             <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
               <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-              <span>48시간 이상 온도 유지<br className="md:hidden" />— 반복 사용 없이 한 번의 준비로 충분</span>
+              <span>20분 이상 온도 유지<br className="md:hidden" />— 전자레인지 15초면 준비 완료</span>
             </li>
             <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
               <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />

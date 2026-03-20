@@ -38,7 +38,7 @@ export default function NightSection() {
               <ul className="mt-5 space-y-2">
                 <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
                   <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  전자레인지 30초로 간편하게 가열
+                  전자레인지 15초로 간편하게 가열
                 </li>
                 <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
                   <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />

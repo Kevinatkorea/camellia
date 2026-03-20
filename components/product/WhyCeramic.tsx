@@ -16,7 +16,7 @@ interface ComparisonCard {
 const CARDS: ComparisonCard[] = [
   {
     name: "SARAJOO\n까멜리아 도자기",
-    temperature: "48시간 이상 유지",
+    temperature: "20분 이상 유지",
     irritation: "거의 없음",
     hygiene: "비다공성 · 세균 번식 차단",
     aesthetics: "아티스트 핸드메이드 오브제",

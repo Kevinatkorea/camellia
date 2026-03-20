@@ -16,7 +16,7 @@ export default function Footer() {
               Body · Mind · Soul
             </p>
             <p className="font-sans text-sm text-brand-muted mt-4 leading-body-kr">
-              전자레인지 30초, 냉동실 1시간.
+              전자레인지 15초, 냉동실 1시간.
               <br />
               작은 습관이 만드는 놀라운 변화를 경험하세요.
             </p>
