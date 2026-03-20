@@ -10,14 +10,14 @@ export default function HomeHero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background image */}
       <ImageSlider
-        images={["/images/hero/hero-main.webp", "/images/hero/hero-alt-2.webp"]}
+        images={["/images/hero/hero-main.jpg", "/images/hero/hero-alt-2.jpg", "/images/product/product-showcase.jpg", "/images/product/hands-fabric.jpg"]}
         alt="SARAJOO 까멜리아 도자기 괄사"
         className="absolute inset-0"
         sizes="100vw"
         priority
         interval={5000}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/70 to-brand-dark/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 to-brand-dark/20" />
       {/* Main copy */}
       <div className="relative z-10 text-center px-6">
         <TextReveal>

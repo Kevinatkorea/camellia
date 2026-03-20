@@ -18,7 +18,7 @@ export default function ProductTeaser() {
           transition={{ duration: DURATION.standard, ease: SARAJOO_EASE }}
         >
           <ImageSlider
-            images={["/images/product/hands-fabric.webp", "/images/product/cool-render-1.webp", "/images/product/hot-render-1.webp", "/images/product/cool-render-2.webp", "/images/product/hot-render-2.webp"]}
+            images={["/images/product/hands-fabric.jpg", "/images/product/cool-render-1.jpg", "/images/product/hot-render-1.jpg", "/images/product/cool-render-2.jpg", "/images/product/hot-render-2.jpg"]}
             alt="SARAJOO 제품"
             className="w-full h-full"
             sizes="(max-width: 768px) 100vw, 60vw"

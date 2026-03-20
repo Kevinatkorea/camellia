@@ -11,7 +11,7 @@ export default function NightSection() {
           {/* Image placeholder — left 60% */}
           <AnimatedSection className="order-2 md:order-1">
             <ImageSlider
-              images={["/images/ritual/model-neck-ritual.webp", "/images/ritual/model-shoulder.webp", "/images/story/silhouette.webp"]}
+              images={["/images/ritual/model-neck-ritual.jpg", "/images/ritual/model-shoulder.jpg", "/images/story/silhouette.jpg"]}
               alt="HOT 괄사 나이트 리추얼"
               className="aspect-[4/5] rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"

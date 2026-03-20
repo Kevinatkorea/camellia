@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "도자기 괄사(로즈괄사) 사용법. 모닝 쿨 리추얼로 붓기 완화, 나이트 핫 리추얼로 스킨케어 흡수. SARAJOO 5분 괄사 마사지 가이드.",
   openGraph: {
-    images: [{ url: "/images/ritual/cool-water.webp", alt: "SARAJOO 괄사 리추얼 가이드" }],
+    images: [{ url: "/images/ritual/cool-water.jpg", alt: "SARAJOO 괄사 리추얼 가이드" }],
   },
 };
 

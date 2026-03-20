@@ -39,7 +39,7 @@ export default function CamelliaStory() {
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6">
           <AnimatedSection>
             <ImageSlider
-              images={["/images/story/stone-light.webp", "/images/ritual/model-body.webp"]}
+              images={["/images/story/stone-light.jpg", "/images/ritual/model-body.jpg"]}
               alt="동백 이야기"
               className="aspect-[4/5] rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
@@ -47,7 +47,7 @@ export default function CamelliaStory() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <ImageSlider
-              images={["/images/story/cool-ocean.webp", "/images/story/beach-rock.webp"]}
+              images={["/images/story/cool-ocean.jpg", "/images/story/beach-rock.jpg"]}
               alt="리추얼 분위기"
               className="aspect-[4/5] rounded-sm"
               sizes="(max-width: 768px) 100vw, 40vw"

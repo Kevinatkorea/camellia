@@ -16,7 +16,7 @@ export default function PhilosophyTeaser() {
   return (
     <section className="relative overflow-hidden">
       {/* Background placeholder with gradient overlay */}
-      <Image src={imgSrc("/images/story/philosophy-bms.webp")} alt="" fill className="object-cover" sizes="100vw" />
+      <Image src={imgSrc("/images/story/philosophy-bms.jpg")} alt="" fill className="object-cover" sizes="100vw" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-cream/90 via-brand-cream/60 to-brand-cream/30" />
 
       {/* Content */}

@@ -102,7 +102,7 @@ export default function HotCoolTabs() {
           >
             {/* Image placeholder */}
             <div className="aspect-[4/5] md:aspect-[3/4] relative overflow-hidden border border-brand-taupe/10">
-              <Image src={imgSrc(activeTab === "hot" ? "/images/product/hot-stone.webp" : "/images/ritual/cool-pool.webp")} alt={activeTab === "hot" ? "HOT 괄사 사용법" : "COOL 괄사 사용법"} fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+              <Image src={imgSrc(activeTab === "hot" ? "/images/product/hot-stone.jpg" : "/images/ritual/cool-pool.jpg")} alt={activeTab === "hot" ? "HOT 괄사 사용법" : "COOL 괄사 사용법"} fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
             </div>
 
             {/* Text */}

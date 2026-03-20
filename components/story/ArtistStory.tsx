@@ -19,7 +19,7 @@ export default function ArtistStory() {
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center mb-20 md:mb-32">
           <AnimatedSection>
             <ImageSlider
-              images={["/images/story/silhouette.webp", "/images/ritual/model-forehead-2.webp"]}
+              images={["/images/story/silhouette.jpg", "/images/ritual/model-forehead-2.jpg"]}
               alt="아티스트 작업 과정"
               className="aspect-[4/5] rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
@@ -79,7 +79,7 @@ export default function ArtistStory() {
           </AnimatedSection>
           <AnimatedSection delay={0.2} className="order-1 md:order-2">
             <ImageSlider
-              images={["/images/story/philosophy-bms.webp", "/images/story/stone-light.webp"]}
+              images={["/images/story/philosophy-bms.jpg", "/images/story/stone-light.jpg"]}
               alt="한국 전통 도예"
               className="aspect-[4/5] rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"

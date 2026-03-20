@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "SARAJOO 까멜리아 도자기 괄사(로즈괄사) 핫 & 쿨 세트. 1,250°C 소성 세라믹, 100% 무독성. 아침 5분 온도 리추얼로 붓기 완화, 페이스라인 관리.",
   openGraph: {
-    images: [{ url: "/images/product/product-hero.webp", alt: "SARAJOO 도자기 괄사 제품" }],
+    images: [{ url: "/images/product/product-hero.jpg", alt: "SARAJOO 도자기 괄사 제품" }],
   },
 };
 
