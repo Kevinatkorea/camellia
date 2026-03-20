@@ -43,6 +43,7 @@ export default function CamelliaStory() {
               alt="동백 이야기"
               className="aspect-[4/5] rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
+              objectPosition={["center 70%", "center center"]}
             />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
