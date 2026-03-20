@@ -39,19 +39,19 @@ export default function ProductTeaser() {
           <ul className="mt-6 space-y-2">
             <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
               <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-              48시간 이상 온도 유지 — 반복 사용 없이 한 번의 준비로 충분
+              <span>48시간 이상 온도 유지<br className="md:hidden" />— 반복 사용 없이 한 번의 준비로 충분</span>
             </li>
             <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
               <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-              100% 무독성 세라믹 — 금속 알레르기 걱정 없는 순수 소재
+              <span>100% 무독성 세라믹<br className="md:hidden" />— 금속 알레르기 걱정 없는 순수 소재</span>
             </li>
             <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
               <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-              아티스트 핸드메이드 — 하나하나 손으로 빚은 뷰티 오브제
+              <span>아티스트 핸드메이드<br className="md:hidden" />— 하나하나 손으로 빚은 뷰티 오브제</span>
             </li>
             <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
               <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-              특허 출원 디자인 — 인체공학적 곡선의 까멜리아 형태
+              <span>특허 출원 디자인<br className="md:hidden" />— 인체공학적 곡선의 까멜리아 형태</span>
             </li>
           </ul>
 

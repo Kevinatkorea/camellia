@@ -23,7 +23,7 @@ export default function StoryHero() {
 
         {/* Placeholder background */}
         <div className="aspect-[16/9] relative rounded-sm overflow-hidden">
-          <Image src={imgSrc("/images/story/beach-rock.jpg")} alt="SARAJOO BODY MIND SOUL" fill className="object-cover" sizes="100vw" style={{ objectPosition: "center calc(50% - 350px)" }} />
+          <Image src={imgSrc("/images/story/beach-rock.jpg")} alt="SARAJOO BODY MIND SOUL" fill className="object-cover object-[center_35%] md:object-[center_20%]" sizes="100vw" />
         </div>
       </div>
     </section>
