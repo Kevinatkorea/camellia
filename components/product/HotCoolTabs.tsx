@@ -106,7 +106,7 @@ export default function HotCoolTabs() {
             </div>
 
             {/* Text */}
-            <div className="md:mt-16">
+            <div className="md:mt-16 md:pb-[60px]">
               <p className="font-serif font-light italic text-xl md:text-2xl text-brand-dark leading-body-kr mb-8">
                 {data.copy}
               </p>
