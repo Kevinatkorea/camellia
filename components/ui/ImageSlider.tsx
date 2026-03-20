@@ -21,7 +21,7 @@ export default function ImageSlider({
   sizes?: string;
   priority?: boolean;
   interval?: number;
-  objectPosition?: string;
+  objectPosition?: string | string[];
 }) {
   const [current, setCurrent] = useState(0);
 
@@ -35,6 +35,12 @@ export default function ImageSlider({
     return () => clearInterval(timer);
   }, [next, interval, images.length]);
 
+  const getObjectPosition = (index: number) => {
+    if (!objectPosition) return undefined;
+    if (typeof objectPosition === "string") return { objectPosition };
+    return objectPosition[index] ? { objectPosition: objectPosition[index] } : undefined;
+  };
+
   if (images.length === 0) return null;
 
   return (
@@ -47,7 +53,7 @@ export default function ImageSlider({
         className="object-cover"
         sizes={sizes}
         priority={priority}
-        style={objectPosition ? { objectPosition } : undefined}
+        style={getObjectPosition(0)}
       />
 
       {/* Animated overlay for subsequent images */}
@@ -67,7 +73,7 @@ export default function ImageSlider({
               fill
               className="object-cover"
               sizes={sizes}
-              style={objectPosition ? { objectPosition } : undefined}
+              style={getObjectPosition(current)}
             />
           </m.div>
         )}

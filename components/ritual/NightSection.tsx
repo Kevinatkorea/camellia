@@ -15,7 +15,7 @@ export default function NightSection() {
               alt="HOT 괄사 나이트 리추얼"
               className="aspect-[4/3] md:aspect-auto md:h-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
-              objectPosition="center calc(50% + 130px)"
+              objectPosition={["center 75%", "center 60%", "center 85%"]}
             />
           </AnimatedSection>
 
