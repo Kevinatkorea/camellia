@@ -10,10 +10,10 @@ import { SARAJOO_EASE, DURATION } from "@/lib/motion";
 export default function ProductTeaser() {
   return (
     <AnimatedSection>
-      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 md:gap-16 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 md:gap-16">
         {/* Left — Product image placeholder (60%) */}
         <m.div
-          className="aspect-[4/5] relative cursor-pointer overflow-hidden"
+          className="aspect-[4/3] md:aspect-auto relative cursor-pointer overflow-hidden"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: DURATION.standard, ease: SARAJOO_EASE }}
         >

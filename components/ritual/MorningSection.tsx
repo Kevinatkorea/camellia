@@ -7,7 +7,7 @@ export default function MorningSection() {
   return (
     <section className="bg-gradient-cool py-20 md:py-32">
       <div className="max-w-screen-xl mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-16">
           {/* Text — left 40% */}
           <AnimatedSection>
             <div>
@@ -50,7 +50,7 @@ export default function MorningSection() {
             <ImageSlider
               images={["/images/ritual/cool-pool.jpg", "/images/story/cool-ocean.jpg", "/images/ritual/model-cheek.jpg"]}
               alt="COOL 괄사 모닝 리추얼"
-              className="aspect-[4/5] rounded-sm"
+              className="aspect-[4/3] md:aspect-auto md:h-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
             />
           </AnimatedSection>

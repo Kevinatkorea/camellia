@@ -16,12 +16,12 @@ export default function ArtistStory() {
         </div>
 
         {/* Block 1: Image left 60% + Text right 40% */}
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center mb-20 md:mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 mb-20 md:mb-32">
           <AnimatedSection>
             <ImageSlider
               images={["/images/story/silhouette.jpg", "/images/ritual/model-forehead-2.jpg"]}
               alt="아티스트 작업 과정"
-              className="aspect-[4/5] rounded-sm"
+              className="aspect-[4/3] md:aspect-auto md:h-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
             />
           </AnimatedSection>
@@ -52,7 +52,7 @@ export default function ArtistStory() {
         </div>
 
         {/* Block 2: Text left 40% + Image right 60% (reversed) */}
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-16">
           <AnimatedSection className="order-2 md:order-1">
             <div>
               <p className="font-sans text-base leading-body-kr text-brand-body mb-5">
@@ -81,7 +81,7 @@ export default function ArtistStory() {
             <ImageSlider
               images={["/images/story/philosophy-bms.jpg", "/images/story/stone-light.jpg"]}
               alt="한국 전통 도예"
-              className="aspect-[4/5] rounded-sm"
+              className="aspect-[4/3] md:aspect-auto md:h-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
             />
           </AnimatedSection>

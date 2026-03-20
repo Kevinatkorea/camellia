@@ -7,13 +7,13 @@ export default function NightSection() {
   return (
     <section className="bg-gradient-hot py-20 md:py-32">
       <div className="max-w-screen-xl mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16">
           {/* Image placeholder — left 60% */}
           <AnimatedSection className="order-2 md:order-1">
             <ImageSlider
               images={["/images/ritual/model-neck-ritual.jpg", "/images/ritual/model-shoulder.jpg", "/images/story/silhouette.jpg"]}
               alt="HOT 괄사 나이트 리추얼"
-              className="aspect-[4/5] rounded-sm"
+              className="aspect-[4/3] md:aspect-auto md:h-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
             />
           </AnimatedSection>
