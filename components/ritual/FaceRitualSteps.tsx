@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { imgSrc } from "@/lib/image-path";
 
 const stepImages = [
-  "/images/ritual/daily-ritual.webp",
-  "/images/ritual/face-ritual.webp",
-  "/images/ritual/leg-foot.webp",
+  imgSrc("/images/ritual/daily-ritual.webp"),
+  imgSrc("/images/ritual/face-ritual.webp"),
+  imgSrc("/images/ritual/leg-foot.webp"),
 ];
 
 const steps = [

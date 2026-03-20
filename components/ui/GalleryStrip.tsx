@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { imgSrc } from "@/lib/image-path";
 
 const GALLERY_IMAGES = [
-  { src: "/images/gallery/gallery-1.webp", alt: "SARAJOO 괄사 갤러리 1" },
-  { src: "/images/gallery/gallery-2.webp", alt: "SARAJOO 괄사 갤러리 2" },
-  { src: "/images/gallery/gallery-3.webp", alt: "SARAJOO 괄사 갤러리 3" },
-  { src: "/images/gallery/gallery-4.webp", alt: "SARAJOO 괄사 갤러리 4" },
-  { src: "/images/gallery/gallery-5.webp", alt: "SARAJOO 괄사 갤러리 5" },
+  { src: imgSrc("/images/gallery/gallery-1.webp"), alt: "SARAJOO 괄사 갤러리 1" },
+  { src: imgSrc("/images/gallery/gallery-2.webp"), alt: "SARAJOO 괄사 갤러리 2" },
+  { src: imgSrc("/images/gallery/gallery-3.webp"), alt: "SARAJOO 괄사 갤러리 3" },
+  { src: imgSrc("/images/gallery/gallery-4.webp"), alt: "SARAJOO 괄사 갤러리 4" },
+  { src: imgSrc("/images/gallery/gallery-5.webp"), alt: "SARAJOO 괄사 갤러리 5" },
 ];
 
 export default function GalleryStrip() {

@@ -4,12 +4,13 @@ import Image from "next/image";
 import * as m from "framer-motion/m";
 import TextReveal from "@/components/ui/TextReveal";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
+import { imgSrc } from "@/lib/image-path";
 
 export default function HomeHero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background image */}
-      <Image src="/images/hero/hero-main.webp" alt="" fill className="object-cover" priority />
+      <Image src={imgSrc("/images/hero/hero-main.webp")} alt="" fill className="object-cover" priority />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/70 to-brand-dark/50" />
       {/* Main copy */}
       <div className="relative z-10 text-center px-6">

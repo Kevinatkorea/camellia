@@ -34,7 +34,7 @@ const config: Config = {
       },
       lineHeight: {
         "body-kr": "1.8",
-        heading: "1.1",
+        heading: "1.2",
       },
       backgroundImage: {
         "gradient-hot":

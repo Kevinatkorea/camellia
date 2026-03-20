@@ -20,7 +20,7 @@ export default function TextReveal({
   }
 
   return (
-    <div className={`overflow-hidden ${className || ""}`}>
+    <div className={`overflow-hidden pb-[0.15em] ${className || ""}`}>
       <m.div
         initial={{ y: "100%" }}
         whileInView={{ y: "0%" }}

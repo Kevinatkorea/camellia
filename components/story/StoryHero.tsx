@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import TextReveal from "@/components/ui/TextReveal";
+import { imgSrc } from "@/lib/image-path";
 
 const words = ["BODY", "MIND", "SOUL"];
 
@@ -22,7 +23,7 @@ export default function StoryHero() {
 
         {/* Placeholder background */}
         <div className="aspect-[16/9] relative rounded-sm overflow-hidden">
-          <Image src="/images/story/philosophy-bms.webp" alt="SARAJOO BODY MIND SOUL" fill className="object-cover" sizes="100vw" />
+          <Image src={imgSrc("/images/story/philosophy-bms.webp")} alt="SARAJOO BODY MIND SOUL" fill className="object-cover" sizes="100vw" />
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { imgSrc } from "@/lib/image-path";
 
 export default function MorningSection() {
   return (
@@ -27,7 +28,7 @@ export default function MorningSection() {
           {/* Image placeholder — right 60% */}
           <AnimatedSection delay={0.2}>
             <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <Image src="/images/ritual/cool-water.webp" alt="COOL 괄사 모닝 리추얼" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+              <Image src={imgSrc("/images/ritual/cool-water.webp")} alt="COOL 괄사 모닝 리추얼" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
             </div>
           </AnimatedSection>
         </div>

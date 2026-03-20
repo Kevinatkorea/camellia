@@ -4,13 +4,14 @@ import Image from "next/image";
 import * as m from "framer-motion/m";
 import TextReveal from "@/components/ui/TextReveal";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
+import { imgSrc } from "@/lib/image-path";
 
 const BADGES = ["특허출원", "무독성", "핸드크래프트"];
 
 export default function ProductHero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
-      <Image src="/images/product/product-hero.webp" alt="" fill className="object-cover" priority />
+      <Image src={imgSrc("/images/product/product-hero.webp")} alt="" fill className="object-cover" priority />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-cream/80 to-brand-cream/60" />
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl mx-auto">
