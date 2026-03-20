@@ -84,6 +84,7 @@ export default function ArtistStory() {
               alt="한국 전통 도예"
               className="aspect-[4/3] md:aspect-auto md:h-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
+              objectPosition={["", "center 20%"]}
             />
           </AnimatedSection>
         </div>
