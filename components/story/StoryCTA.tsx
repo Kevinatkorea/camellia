@@ -2,6 +2,7 @@
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CTAButton from "@/components/ui/CTAButton";
+import { SHOP_URL } from "@/lib/constants";
 
 export default function StoryCTA() {
   return (
@@ -9,7 +10,7 @@ export default function StoryCTA() {
       <div className="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
         <AnimatedSection>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <CTAButton href="/shop" variant="primary">
+            <CTAButton href={SHOP_URL} variant="primary" external>
               아티스트의 손끝에서 당신의 일상으로
             </CTAButton>
             <CTAButton href="/product" variant="outline">

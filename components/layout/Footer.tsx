@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SHOP_URL } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -45,12 +46,14 @@ export default function Footer() {
               >
                 브랜드 스토리
               </Link>
-              <Link
-                href="/shop"
+              <a
+                href={SHOP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-sans text-sm text-brand-body hover:text-brand-gold transition-colors"
               >
                 구매하기
-              </Link>
+              </a>
             </nav>
           </div>
 

@@ -2,6 +2,7 @@
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CTAButton from "@/components/ui/CTAButton";
+import { SHOP_URL } from "@/lib/constants";
 
 export default function RitualCTA() {
   return (
@@ -12,7 +13,7 @@ export default function RitualCTA() {
             5분이면 충분합니다. 나만의 리추얼을 시작하세요.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <CTAButton href="/shop" variant="primary">
+            <CTAButton href={SHOP_URL} variant="primary" external>
               나만의 리추얼 시작하기
             </CTAButton>
             <CTAButton href="/product" variant="outline">

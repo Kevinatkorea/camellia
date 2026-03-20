@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { SHOP_URL } from "@/lib/constants";
 
 export default function FloatingCTA() {
   const pathname = usePathname();
@@ -40,15 +40,17 @@ export default function FloatingCTA() {
             핫 & 쿨 1쌍 세트 · 79,000원
           </p>
         </div>
-        <Link
-          href="/shop"
+        <a
+          href={SHOP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-brand-gold text-white font-sans text-sm px-6 py-2.5 hover:bg-brand-dark transition-colors flex-shrink-0 w-full sm:w-auto text-center"
           style={{
             transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
           지금 만나보기
-        </Link>
+        </a>
       </div>
     </div>
   );

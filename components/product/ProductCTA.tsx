@@ -3,6 +3,7 @@
 import TextReveal from "@/components/ui/TextReveal";
 import CTAButton from "@/components/ui/CTAButton";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { SHOP_URL } from "@/lib/constants";
 
 export default function ProductCTA() {
   return (
@@ -27,10 +28,10 @@ export default function ProductCTA() {
 
       {/* CTA Buttons */}
       <AnimatedSection delay={0.35} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-        <CTAButton href="/shop" variant="primary">
+        <CTAButton href={SHOP_URL} variant="primary" external>
           지금 만나보기
         </CTAButton>
-        <CTAButton href="/shop" variant="secondary">
+        <CTAButton href={SHOP_URL} variant="secondary" external>
           선물하기
         </CTAButton>
       </AnimatedSection>
