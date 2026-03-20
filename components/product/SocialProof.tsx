@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Image from "next/image";
 import * as m from "framer-motion/m";
 import { AnimatePresence } from "framer-motion";
 import CountUpNumber from "@/components/ui/CountUpNumber";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
+import { imgSrc } from "@/lib/image-path";
 
 const STATS = [
   {
@@ -30,22 +32,27 @@ const REVIEWS = [
   {
     quote: "디자인도 이쁜데 그립감도 좋아서 매일 쓰고 있어요",
     author: "박민**** · ★★★★★",
+    image: "/images/product/cool-usage.webp",
   },
   {
     quote: "너무 너무 좋네요♥ 감사합니다",
     author: "한혜**** · ★★★★★",
+    image: "/images/ritual/face-ritual.webp",
   },
   {
     quote: "공구 또 언제 하나요? 너무 좋아서 선물하고 싶어요",
     author: "박주**** · ★★★★★",
+    image: "/images/story/product-usage.webp",
   },
   {
     quote: "시원한 느낌이 기분좋아요. 아침마다 쓰고 있어요",
     author: "김연**** · ★★★★★",
+    image: "/images/ritual/daily-ritual.webp",
   },
   {
     quote: "열심히 써보고 있어요. 촉감이 매끄럽고 좋습니다",
     author: "신은**** · ★★★★",
+    image: "/images/ritual/skincare-lifestyle.webp",
   },
 ];
 
@@ -76,8 +83,8 @@ export default function SocialProof() {
       </div>
 
       {/* Review Carousel */}
-      <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-        <div className="relative min-h-[160px] flex items-center justify-center">
+      <AnimatedSection className="max-w-3xl mx-auto mb-16">
+        <div className="relative min-h-[200px]">
           <AnimatePresence mode="wait">
             <m.div
               key={currentReview}
@@ -85,14 +92,27 @@ export default function SocialProof() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: DURATION.standard, ease: SARAJOO_EASE }}
-              className="text-center"
+              className="flex flex-col md:flex-row items-center gap-6 md:gap-10"
             >
-              <p className="font-serif font-light italic text-xl md:text-2xl text-brand-dark leading-body-kr mb-4">
-                &ldquo;{REVIEWS[currentReview].quote}&rdquo;
-              </p>
-              <p className="font-sans text-sm text-brand-muted">
-                &mdash; {REVIEWS[currentReview].author}
-              </p>
+              {/* Review Image */}
+              <div className="w-32 h-32 md:w-40 md:h-40 relative rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-gold/20">
+                <Image
+                  src={imgSrc(REVIEWS[currentReview].image)}
+                  alt="사용 후기"
+                  fill
+                  className="object-cover"
+                  sizes="160px"
+                />
+              </div>
+              {/* Review Text */}
+              <div className="text-center md:text-left">
+                <p className="font-serif-kr font-light text-xl md:text-2xl text-brand-dark leading-body-kr mb-4">
+                  &ldquo;{REVIEWS[currentReview].quote}&rdquo;
+                </p>
+                <p className="font-sans text-sm text-brand-muted">
+                  &mdash; {REVIEWS[currentReview].author}
+                </p>
+              </div>
             </m.div>
           </AnimatePresence>
         </div>

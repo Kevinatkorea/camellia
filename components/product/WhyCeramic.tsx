@@ -53,7 +53,7 @@ export default function WhyCeramic() {
       {/* Headline */}
       <div className="text-center mb-12 md:mb-16">
         <TextReveal>
-          <h2 className="font-serif font-light italic text-2xl md:text-4xl lg:text-5xl tracking-serif-wide text-brand-dark leading-heading">
+          <h2 className="font-serif-kr font-light italic text-2xl md:text-4xl lg:text-5xl tracking-serif-wide text-brand-dark leading-heading">
             도자기만이 할 수 있는 것들이 있습니다.
           </h2>
         </TextReveal>

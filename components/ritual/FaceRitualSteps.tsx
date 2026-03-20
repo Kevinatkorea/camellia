@@ -33,7 +33,7 @@ export default function FaceRitualSteps() {
           <p className="font-display text-xs tracking-label uppercase text-brand-muted mb-2 text-center">
             Face Ritual
           </p>
-          <h3 className="font-serif font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-16 text-center">
+          <h3 className="font-serif-kr font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-16 text-center">
             페이스 리추얼 스텝
           </h3>
         </AnimatedSection>

@@ -10,7 +10,7 @@ export default function CamelliaStory() {
       <div className="max-w-screen-xl mx-auto px-6 md:px-8">
         {/* Text */}
         <AnimatedSection className="mb-16 text-center md:text-left">
-          <h3 className="font-serif font-light italic text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6">
+          <h3 className="font-serif-kr font-light italic text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6">
             동백, 겨울에 피는 꽃.
           </h3>
           <p className="font-sans text-base leading-body-kr text-brand-body max-w-2xl">

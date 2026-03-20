@@ -16,7 +16,7 @@ export default function ProductHero() {
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl mx-auto">
         <TextReveal>
-          <h1 className="font-serif font-light text-3xl md:text-5xl lg:text-6xl tracking-serif-wide text-brand-dark leading-heading">
+          <h1 className="font-serif-kr font-light text-3xl md:text-5xl lg:text-6xl tracking-serif-wide text-brand-dark leading-heading">
             아침마다 거울 속 부은 얼굴, 이제 5분이면 달라집니다.
           </h1>
         </TextReveal>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat, DM_Sans } from "next/font/google";
+import { Playfair_Display, Noto_Serif_KR, Montserrat, DM_Sans } from "next/font/google";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
@@ -8,11 +8,18 @@ import MotionProvider from "@/components/layout/MotionProvider";
 import JsonLd from "@/components/layout/JsonLd";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "600"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   variable: "--font-serif",
+  display: "swap",
+});
+
+const notoSerifKR = Noto_Serif_KR({
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  variable: "--font-serif-kr",
   display: "swap",
 });
 
@@ -87,7 +94,7 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body
-        className={`${cormorant.variable} ${montserrat.variable} ${dmSans.variable} font-sans antialiased noise-overlay`}
+        className={`${playfair.variable} ${notoSerifKR.variable} ${montserrat.variable} ${dmSans.variable} font-sans antialiased noise-overlay`}
       >
         <MotionProvider>
           <MetaPixel />

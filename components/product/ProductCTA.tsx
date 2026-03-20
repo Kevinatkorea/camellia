@@ -10,7 +10,7 @@ export default function ProductCTA() {
     <section className="max-w-screen-xl mx-auto px-6 md:px-8 text-center">
       {/* Copy */}
       <TextReveal className="mb-6">
-        <h2 className="font-serif font-light text-2xl md:text-4xl lg:text-5xl tracking-serif-wide text-brand-dark leading-heading">
+        <h2 className="font-serif-kr font-light text-2xl md:text-4xl lg:text-5xl tracking-serif-wide text-brand-dark leading-heading">
           당신의 스킨케어가 이 괄사를 만나면 완성됩니다.
         </h2>
       </TextReveal>

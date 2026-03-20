@@ -22,7 +22,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["Cormorant Garamond", "serif"],
+        serif: ["var(--font-serif)", "Playfair Display", "serif"],
+        "serif-kr": ["var(--font-serif-kr)", "Noto Serif KR", "serif"],
         sans: ["Pretendard", "sans-serif"],
         display: ["Montserrat", "sans-serif"],
         mono: ["DM Sans", "sans-serif"],

@@ -22,7 +22,7 @@ export default function NightSection() {
               <p className="font-display text-xs tracking-label uppercase text-brand-muted mb-4">
                 Night Ritual
               </p>
-              <h3 className="font-serif font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6">
+              <h3 className="font-serif-kr font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6">
                 밤을 다독이는 따뜻한 위로
               </h3>
               <p className="font-sans text-base leading-body-kr text-brand-body">

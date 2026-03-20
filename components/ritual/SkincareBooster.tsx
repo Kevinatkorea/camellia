@@ -16,7 +16,7 @@ export default function SkincareBooster() {
           <p className="font-display text-xs tracking-label uppercase text-brand-muted mb-2 text-center">
             Skincare Booster
           </p>
-          <h3 className="font-serif font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-16 text-center">
+          <h3 className="font-serif-kr font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-16 text-center">
             스킨케어 부스터
           </h3>
         </AnimatedSection>
