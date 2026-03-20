@@ -86,9 +86,9 @@ export default function Footer() {
         {/* Bottom — Legal */}
         <div className="mt-12 pt-8 border-t border-brand-taupe/20">
           <div className="font-sans text-xs text-brand-muted/70 leading-relaxed space-y-1">
-            <p>상호: SARAJOO | 대표: [대표자명] | 사업자등록번호: [000-00-00000]</p>
+            <p>상호: SARAJOO | 대표: 주세정 | 사업자등록번호: [000-00-00000]</p>
             <p>통신판매업 신고번호: 제0000-서울강남-00000호</p>
-            <p>주소: [사업장 주소] | 고객센터: [전화번호]</p>
+            <p>주소: 서울시 강동구 양재대로 1615 | 고객센터: 010-4723-2500</p>
             <p className="mt-2">
               © {new Date().getFullYear()} SARAJOO. All rights reserved. |
               특허 출원 중
