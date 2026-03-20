@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import * as m from "framer-motion/m";
 import { AnimatePresence } from "framer-motion";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
@@ -16,15 +16,6 @@ function AccordionItem({
   isOpen: boolean;
   onToggle: () => void;
 }) {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      setHeight(contentRef.current.scrollHeight);
-    }
-  }, [answer]);
-
   return (
     <div className="border-b border-brand-taupe/20">
       <button
@@ -47,12 +38,12 @@ function AccordionItem({
         {isOpen && (
           <m.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height, opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: DURATION.standard, ease: SARAJOO_EASE }}
             className="overflow-hidden"
           >
-            <div ref={contentRef} className="pb-5">
+            <div className="pb-5">
               <p className="font-sans text-brand-body leading-body-kr">
                 {answer}
               </p>
