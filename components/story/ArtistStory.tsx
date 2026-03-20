@@ -23,6 +23,7 @@ export default function ArtistStory() {
               alt="아티스트 작업 과정"
               className="aspect-[4/3] md:aspect-auto md:h-full rounded-sm"
               sizes="(max-width: 768px) 100vw, 60vw"
+              objectPosition={["", "center 20%"]}
             />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
