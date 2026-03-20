@@ -23,7 +23,7 @@ export default function StoryHero() {
 
         {/* Placeholder background */}
         <div className="aspect-[16/9] relative rounded-sm overflow-hidden">
-          <Image src={imgSrc("/images/story/philosophy-bms.webp")} alt="SARAJOO BODY MIND SOUL" fill className="object-cover" sizes="100vw" />
+          <Image src={imgSrc("/images/story/beach-rock.webp")} alt="SARAJOO BODY MIND SOUL" fill className="object-cover" sizes="100vw" />
         </div>
       </div>
     </section>

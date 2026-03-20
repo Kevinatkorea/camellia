@@ -12,7 +12,7 @@ export default function NightSection() {
           {/* Image placeholder — left 60% */}
           <AnimatedSection className="order-2 md:order-1">
             <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <Image src={imgSrc("/images/ritual/ritual-wellness.webp")} alt="HOT 괄사 나이트 리추얼" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+              <Image src={imgSrc("/images/ritual/model-neck-ritual.webp")} alt="HOT 괄사 나이트 리추얼" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
             </div>
           </AnimatedSection>
 

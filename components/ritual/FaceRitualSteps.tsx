@@ -5,9 +5,9 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import { imgSrc } from "@/lib/image-path";
 
 const stepImages = [
-  imgSrc("/images/ritual/daily-ritual.webp"),
-  imgSrc("/images/ritual/face-ritual.webp"),
-  imgSrc("/images/ritual/leg-foot.webp"),
+  imgSrc("/images/ritual/model-face-1.webp"),
+  imgSrc("/images/ritual/model-cheek.webp"),
+  imgSrc("/images/ritual/leg-usage.webp"),
 ];
 
 const steps = [

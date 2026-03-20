@@ -32,27 +32,27 @@ const REVIEWS = [
   {
     quote: "디자인도 이쁜데 그립감도 좋아서 매일 쓰고 있어요",
     author: "박민**** · ★★★★★",
-    image: "/images/product/cool-usage.webp",
+    image: "/images/reviews/review-1.webp",
   },
   {
     quote: "너무 너무 좋네요♥ 감사합니다",
     author: "한혜**** · ★★★★★",
-    image: "/images/ritual/face-ritual.webp",
+    image: "/images/reviews/review-2.webp",
   },
   {
     quote: "공구 또 언제 하나요? 너무 좋아서 선물하고 싶어요",
     author: "박주**** · ★★★★★",
-    image: "/images/story/product-usage.webp",
+    image: "/images/reviews/review-3.webp",
   },
   {
     quote: "시원한 느낌이 기분좋아요. 아침마다 쓰고 있어요",
     author: "김연**** · ★★★★★",
-    image: "/images/ritual/daily-ritual.webp",
+    image: "/images/reviews/review-4.webp",
   },
   {
     quote: "열심히 써보고 있어요. 촉감이 매끄럽고 좋습니다",
     author: "신은**** · ★★★★",
-    image: "/images/ritual/skincare-lifestyle.webp",
+    image: "/images/reviews/review-5.webp",
   },
 ];
 

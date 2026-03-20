@@ -22,12 +22,12 @@ export default function CamelliaStory() {
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6">
           <AnimatedSection>
             <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <Image src={imgSrc("/images/story/story-narrative.webp")} alt="동백 이야기" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+              <Image src={imgSrc("/images/story/stone-light.webp")} alt="동백 이야기" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <Image src={imgSrc("/images/story/story-ritual.webp")} alt="리추얼 분위기" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" />
+              <Image src={imgSrc("/images/story/cool-ocean.webp")} alt="리추얼 분위기" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" />
             </div>
           </AnimatedSection>
         </div>

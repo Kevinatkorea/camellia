@@ -18,7 +18,7 @@ export default function ProductTeaser() {
           whileHover={{ scale: 1.05, filter: "brightness(1.05)" }}
           transition={{ duration: DURATION.standard, ease: SARAJOO_EASE }}
         >
-          <Image src={imgSrc("/images/product/product-showcase.webp")} alt="SARAJOO 까멜리아 도자기 괄사 3종" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+          <Image src={imgSrc("/images/product/hands-fabric.webp")} alt="SARAJOO 까멜리아 도자기 괄사 3종" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
         </m.div>
 
         {/* Right — Copy (40%) */}

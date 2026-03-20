@@ -6,7 +6,7 @@ export default function SectionHeading({
   align = "left",
   delay = 0,
 }: {
-  en?: string;
+  en?: React.ReactNode;
   kr?: string;
   align?: "left" | "center";
   delay?: number;
