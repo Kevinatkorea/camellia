@@ -9,14 +9,16 @@ export default function HomeHero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background image */}
-      <ImageSlider
-        images={["/images/hero/hero-main.jpg", "/images/hero/hero-alt-2.jpg", "/images/product/product-showcase.jpg", "/images/product/hands-fabric.jpg"]}
-        alt="SARAJOO 까멜리아 도자기 괄사"
-        className="absolute inset-0"
-        sizes="100vw"
-        priority
-        interval={5000}
-      />
+      <div className="absolute inset-0">
+        <ImageSlider
+          images={["/images/hero/hero-mood-1.jpg", "/images/hero/hero-mood-2.jpg", "/images/hero/hero-mood-3.jpg", "/images/hero/hero-mood-4.jpg"]}
+          alt="SARAJOO 까멜리아 도자기 괄사"
+          className="relative w-full h-full"
+          sizes="100vw"
+          priority
+          interval={5000}
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 to-brand-dark/20" />
       {/* Main copy */}
       <div className="relative z-10 text-center px-6">
