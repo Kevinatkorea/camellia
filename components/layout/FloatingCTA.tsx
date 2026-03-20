@@ -37,7 +37,7 @@ export default function FloatingCTA() {
             SARAJOO 까멜리아 도자기 괄사
           </p>
           <p className="font-sans text-xs text-brand-muted">
-            핫 & 쿨 1쌍 세트 · 79,000원
+            핫 & 쿨 세트 · <span className="line-through text-brand-muted/60">130,000원</span> 91,000원
           </p>
         </div>
         <a

@@ -18,7 +18,7 @@ export default function JsonLd() {
     image: "https://sarajoo.com/images/product/product-hero.jpg",
     offers: {
       "@type": "Offer",
-      price: "79000",
+      price: "91000",
       priceCurrency: "KRW",
       availability: "https://schema.org/InStock",
       url: "https://smartstore.naver.com/PLACEHOLDER",

@@ -17,13 +17,26 @@ export default function ProductCTA() {
 
       {/* Price */}
       <AnimatedSection delay={0.2} className="mb-10">
-        <p className="font-sans text-base md:text-lg text-brand-body">
-          <span className="font-medium text-brand-dark">79,000원</span>
-          <span className="text-brand-muted mx-2">&middot;</span>
-          핫 &amp; 쿨 1쌍 세트
-          <span className="text-brand-muted mx-2">&middot;</span>
-          무료 배송
-        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+          {/* 단품 */}
+          <div className="text-center">
+            <p className="font-display text-xs tracking-label uppercase text-brand-muted mb-1">단품</p>
+            <p className="font-sans text-brand-body">
+              <span className="line-through text-brand-muted text-sm">65,000원</span>
+              <span className="font-medium text-brand-dark text-lg ml-2">52,000원</span>
+            </p>
+            <p className="font-sans text-xs text-brand-gold mt-1">20% OFF</p>
+          </div>
+          {/* 핫앤쿨 세트 */}
+          <div className="text-center border border-brand-gold/30 px-6 py-3">
+            <p className="font-display text-xs tracking-label uppercase text-brand-gold mb-1">핫 &amp; 쿨 세트</p>
+            <p className="font-sans text-brand-body">
+              <span className="line-through text-brand-muted text-sm">130,000원</span>
+              <span className="font-medium text-brand-dark text-lg ml-2">91,000원</span>
+            </p>
+            <p className="font-sans text-xs text-brand-gold mt-1">30% OFF · 무료 배송</p>
+          </div>
+        </div>
       </AnimatedSection>
 
       {/* CTA Buttons */}
