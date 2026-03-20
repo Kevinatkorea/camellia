@@ -37,24 +37,36 @@ export default function ImageSlider({
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
-      <AnimatePresence mode="wait">
-        <m.div
-          key={current}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={imgSrc(images[current])}
-            alt={`${alt} ${current + 1}`}
-            fill
-            className="object-cover"
-            sizes={sizes}
-            priority={priority && current === 0}
-          />
-        </m.div>
+      {/* Base image — always rendered to maintain layout size */}
+      <Image
+        src={imgSrc(images[0])}
+        alt={`${alt} 1`}
+        fill
+        className="object-cover"
+        sizes={sizes}
+        priority={priority}
+      />
+
+      {/* Animated overlay for subsequent images */}
+      <AnimatePresence>
+        {current !== 0 && (
+          <m.div
+            key={current}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="absolute inset-0 z-[1]"
+          >
+            <Image
+              src={imgSrc(images[current])}
+              alt={`${alt} ${current + 1}`}
+              fill
+              className="object-cover"
+              sizes={sizes}
+            />
+          </m.div>
+        )}
       </AnimatePresence>
 
       {/* Dot indicators */}

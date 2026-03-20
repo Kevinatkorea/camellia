@@ -18,14 +18,12 @@ export default function ArtistStory() {
         {/* Block 1: Image left 60% + Text right 40% */}
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center mb-20 md:mb-32">
           <AnimatedSection>
-            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <ImageSlider
-                images={["/images/story/silhouette.webp", "/images/ritual/model-forehead-2.webp"]}
-                alt="아티스트 작업 과정"
-                className="absolute inset-0"
-                sizes="(max-width: 768px) 100vw, 60vw"
-              />
-            </div>
+            <ImageSlider
+              images={["/images/story/silhouette.webp", "/images/ritual/model-forehead-2.webp"]}
+              alt="아티스트 작업 과정"
+              className="aspect-[4/5] rounded-sm"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <div>
@@ -80,14 +78,12 @@ export default function ArtistStory() {
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.2} className="order-1 md:order-2">
-            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <ImageSlider
-                images={["/images/story/philosophy-bms.webp", "/images/story/stone-light.webp"]}
-                alt="한국 전통 도예"
-                className="absolute inset-0"
-                sizes="(max-width: 768px) 100vw, 60vw"
-              />
-            </div>
+            <ImageSlider
+              images={["/images/story/philosophy-bms.webp", "/images/story/stone-light.webp"]}
+              alt="한국 전통 도예"
+              className="aspect-[4/5] rounded-sm"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
           </AnimatedSection>
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function ProductTeaser() {
           <ImageSlider
             images={["/images/product/hands-fabric.webp", "/images/product/cool-render-1.webp", "/images/product/hot-render-1.webp", "/images/product/cool-render-2.webp", "/images/product/hot-render-2.webp"]}
             alt="SARAJOO 제품"
-            className="absolute inset-0"
+            className="w-full h-full"
             sizes="(max-width: 768px) 100vw, 60vw"
           />
         </m.div>

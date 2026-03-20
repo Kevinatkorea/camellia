@@ -10,14 +10,12 @@ export default function NightSection() {
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
           {/* Image placeholder — left 60% */}
           <AnimatedSection className="order-2 md:order-1">
-            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <ImageSlider
-                images={["/images/ritual/model-neck-ritual.webp", "/images/ritual/model-shoulder.webp", "/images/story/silhouette.webp"]}
-                alt="HOT 괄사 나이트 리추얼"
-                className="absolute inset-0"
-                sizes="(max-width: 768px) 100vw, 60vw"
-              />
-            </div>
+            <ImageSlider
+              images={["/images/ritual/model-neck-ritual.webp", "/images/ritual/model-shoulder.webp", "/images/story/silhouette.webp"]}
+              alt="HOT 괄사 나이트 리추얼"
+              className="aspect-[4/5] rounded-sm"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
           </AnimatedSection>
 
           {/* Text — right 40% */}

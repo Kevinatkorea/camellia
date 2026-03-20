@@ -47,14 +47,12 @@ export default function MorningSection() {
 
           {/* Image placeholder — right 60% */}
           <AnimatedSection delay={0.2}>
-            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <ImageSlider
-                images={["/images/ritual/cool-pool.webp", "/images/story/cool-ocean.webp", "/images/ritual/model-cheek.webp"]}
-                alt="COOL 괄사 모닝 리추얼"
-                className="absolute inset-0"
-                sizes="(max-width: 768px) 100vw, 60vw"
-              />
-            </div>
+            <ImageSlider
+              images={["/images/ritual/cool-pool.webp", "/images/story/cool-ocean.webp", "/images/ritual/model-cheek.webp"]}
+              alt="COOL 괄사 모닝 리추얼"
+              className="aspect-[4/5] rounded-sm"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
           </AnimatedSection>
         </div>
       </div>

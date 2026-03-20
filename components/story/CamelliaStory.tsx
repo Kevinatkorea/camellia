@@ -38,24 +38,20 @@ export default function CamelliaStory() {
         {/* Image juxtaposition — asymmetric grid */}
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6">
           <AnimatedSection>
-            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <ImageSlider
-                images={["/images/story/stone-light.webp", "/images/ritual/model-body.webp"]}
-                alt="동백 이야기"
-                className="absolute inset-0"
-                sizes="(max-width: 768px) 100vw, 60vw"
-              />
-            </div>
+            <ImageSlider
+              images={["/images/story/stone-light.webp", "/images/ritual/model-body.webp"]}
+              alt="동백 이야기"
+              className="aspect-[4/5] rounded-sm"
+              sizes="(max-width: 768px) 100vw, 60vw"
+            />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
-              <ImageSlider
-                images={["/images/story/cool-ocean.webp", "/images/story/beach-rock.webp"]}
-                alt="리추얼 분위기"
-                className="absolute inset-0"
-                sizes="(max-width: 768px) 100vw, 40vw"
-              />
-            </div>
+            <ImageSlider
+              images={["/images/story/cool-ocean.webp", "/images/story/beach-rock.webp"]}
+              alt="리추얼 분위기"
+              className="aspect-[4/5] rounded-sm"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
           </AnimatedSection>
         </div>
       </div>
