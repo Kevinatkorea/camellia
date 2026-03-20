@@ -13,6 +13,7 @@ export default function ImageSlider({
   sizes = "100vw",
   priority = false,
   interval = 4000,
+  objectPosition,
 }: {
   images: string[];
   alt: string;
@@ -20,6 +21,7 @@ export default function ImageSlider({
   sizes?: string;
   priority?: boolean;
   interval?: number;
+  objectPosition?: string;
 }) {
   const [current, setCurrent] = useState(0);
 
@@ -45,6 +47,7 @@ export default function ImageSlider({
         className="object-cover"
         sizes={sizes}
         priority={priority}
+        style={objectPosition ? { objectPosition } : undefined}
       />
 
       {/* Animated overlay for subsequent images */}
@@ -64,6 +67,7 @@ export default function ImageSlider({
               fill
               className="object-cover"
               sizes={sizes}
+              style={objectPosition ? { objectPosition } : undefined}
             />
           </m.div>
         )}
