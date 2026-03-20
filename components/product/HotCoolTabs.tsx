@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import * as m from "framer-motion/m";
 import { AnimatePresence } from "framer-motion";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
@@ -14,8 +15,6 @@ const TAB_DATA: Record<
     copy: string;
     details: string[];
     gradient: string;
-    placeholderFrom: string;
-    placeholderTo: string;
   }
 > = {
   hot: {
@@ -27,8 +26,6 @@ const TAB_DATA: Record<
       "혈액순환 촉진",
     ],
     gradient: "bg-gradient-hot",
-    placeholderFrom: "from-brand-beige",
-    placeholderTo: "to-brand-taupe/30",
   },
   cool: {
     label: "COOL",
@@ -39,8 +36,6 @@ const TAB_DATA: Record<
       "붓기 완화 & 모공 수축",
     ],
     gradient: "bg-gradient-cool",
-    placeholderFrom: "from-brand-cream",
-    placeholderTo: "to-brand-cool/20",
   },
 };
 
@@ -101,9 +96,9 @@ export default function HotCoolTabs() {
             className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 md:gap-12 items-start"
           >
             {/* Image placeholder */}
-            <div
-              className={`aspect-[4/5] md:aspect-[3/4] bg-gradient-to-br ${data.placeholderFrom} ${data.placeholderTo} border border-brand-taupe/10`}
-            />
+            <div className="aspect-[4/5] md:aspect-[3/4] relative overflow-hidden border border-brand-taupe/10">
+              <Image src={activeTab === "hot" ? "/images/product/hot-usage.webp" : "/images/product/cool-usage.webp"} alt={activeTab === "hot" ? "HOT 괄사 사용법" : "COOL 괄사 사용법"} fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+            </div>
 
             {/* Text */}
             <div className="md:mt-16">

@@ -7,9 +7,12 @@ const ProcessTimeline = dynamic(() => import("@/components/story/ProcessTimeline
 const StoryCTA = dynamic(() => import("@/components/story/StoryCTA"));
 
 export const metadata = {
-  title: "브랜드 스토리",
+  title: "브랜드 스토리 — 아티스트 핸드메이드 도자기 괄사",
   description:
-    "동백, 겨울에 피는 꽃. SARAJOO의 이야기, 아티스트의 손끝에서 태어난 도자기 괄사.",
+    "SARAJOO 도자기 괄사(로즈괄사)의 탄생 이야기. 동백꽃에서 영감받은 1,250°C 고온 소성 아티스트 핸드메이드 세라믹 괄사.",
+  openGraph: {
+    images: [{ url: "/images/story/philosophy-bms.webp", alt: "SARAJOO 브랜드 스토리" }],
+  },
 };
 
 export default function StoryPage() {

@@ -8,6 +8,12 @@ body {
   background: #f5f0eb;
 }
 
+/* 한글 줄바꿈 최적화 — 단어 단위 줄바꿈 */
+h1, h2, h3, h4, h5, h6, p {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* ─── Noise Texture Overlay ─── */
 .noise-overlay::after {
   content: "";

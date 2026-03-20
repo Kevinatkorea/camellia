@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import * as m from "framer-motion/m";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTAButton from "@/components/ui/CTAButton";
@@ -12,10 +13,12 @@ export default function ProductTeaser() {
       <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 md:gap-16 items-start">
         {/* Left — Product image placeholder (60%) */}
         <m.div
-          className="aspect-[4/5] bg-gradient-to-br from-brand-beige to-brand-taupe/30 cursor-pointer"
+          className="aspect-[4/5] relative cursor-pointer overflow-hidden"
           whileHover={{ scale: 1.05, filter: "brightness(1.05)" }}
           transition={{ duration: DURATION.standard, ease: SARAJOO_EASE }}
-        />
+        >
+          <Image src="/images/product/product-showcase.webp" alt="SARAJOO 까멜리아 도자기 괄사 3종" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+        </m.div>
 
         {/* Right — Copy (40%) */}
         <div className="md:mt-16">

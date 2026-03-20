@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import * as m from "framer-motion/m";
 import TextReveal from "@/components/ui/TextReveal";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
@@ -8,14 +9,14 @@ const BADGES = ["특허출원", "무독성", "핸드크래프트"];
 
 export default function ProductHero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-brand-beige to-brand-cream px-6">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+      <Image src="/images/product/product-hero.webp" alt="" fill className="object-cover" priority />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-cream/80 to-brand-cream/60" />
       {/* Content */}
-      <div className="text-center max-w-3xl mx-auto">
+      <div className="relative z-10 text-center max-w-3xl mx-auto">
         <TextReveal>
           <h1 className="font-serif font-light text-3xl md:text-5xl lg:text-6xl tracking-serif-wide text-brand-dark leading-heading">
-            아침마다 거울 속 부은 얼굴,
-            <br />
-            이제 5분이면 달라집니다.
+            아침마다 거울 속 부은 얼굴, 이제 5분이면 달라집니다.
           </h1>
         </TextReveal>
 
@@ -37,7 +38,7 @@ export default function ProductHero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: DURATION.standard, ease: SARAJOO_EASE, delay: 0.6 }}
-        className="absolute bottom-12 left-0 right-0 flex items-center justify-center gap-4 md:gap-6"
+        className="relative z-10 absolute bottom-12 left-0 right-0 flex items-center justify-center gap-4 md:gap-6"
       >
         {BADGES.map((badge) => (
           <span

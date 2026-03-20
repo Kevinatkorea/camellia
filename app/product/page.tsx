@@ -10,9 +10,12 @@ const ProductCTA = dynamic(() => import("@/components/product/ProductCTA"));
 const FAQ = dynamic(() => import("@/components/product/FAQ"));
 
 export const metadata: Metadata = {
-  title: "제품 소개",
+  title: "제품 소개 — 도자기 괄사 핫앤쿨 세트",
   description:
-    "아침 5분 온도 리추얼. SARAJOO 까멜리아 도자기 괄사 핫 & 쿨 세트로 붓기를 가라앉히고, 선명한 페이스라인을 만들어보세요.",
+    "SARAJOO 까멜리아 도자기 괄사(로즈괄사) 핫 & 쿨 세트. 1,250°C 소성 세라믹, 100% 무독성. 아침 5분 온도 리추얼로 붓기 완화, 페이스라인 관리.",
+  openGraph: {
+    images: [{ url: "/images/product/product-hero.webp", alt: "SARAJOO 도자기 괄사 제품" }],
+  },
 };
 
 export default function ProductPage() {

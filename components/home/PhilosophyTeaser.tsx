@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import * as m from "framer-motion/m";
 import TextReveal from "@/components/ui/TextReveal";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
@@ -14,8 +15,8 @@ export default function PhilosophyTeaser() {
   return (
     <section className="relative overflow-hidden">
       {/* Background placeholder with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-cream to-brand-beige" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-cream/90 via-brand-cream/50 to-transparent" />
+      <Image src="/images/story/philosophy-bms.webp" alt="" fill className="object-cover" sizes="100vw" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-cream/90 via-brand-cream/60 to-brand-cream/30" />
 
       {/* Content */}
       <div className="relative max-w-screen-xl mx-auto px-6 md:px-8 py-20 md:py-32">

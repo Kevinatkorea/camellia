@@ -13,9 +13,7 @@ export default function BeforeAfter() {
               Before
             </p>
             <p className="font-sans text-lg md:text-xl text-brand-dark leading-body-kr">
-              매일 아침 반복되는
-              <br />
-              붓기와 피로한 인상
+              매일 아침 반복되는 붓기와 피로한 인상
             </p>
           </div>
         </AnimatedSection>
@@ -30,9 +28,7 @@ export default function BeforeAfter() {
               </p>
             </div>
             <p className="font-sans text-lg md:text-xl text-brand-dark leading-body-kr">
-              5분 리추얼 후,
-              <br />
-              선명해진 라인과 환한 표정
+              5분 리추얼 후, 선명해진 라인과 환한 표정
             </p>
           </div>
         </AnimatedSection>

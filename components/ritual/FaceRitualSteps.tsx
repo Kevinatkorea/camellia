@@ -1,6 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+
+const stepImages = [
+  "/images/ritual/daily-ritual.webp",
+  "/images/ritual/face-ritual.webp",
+  "/images/ritual/leg-foot.webp",
+];
 
 const steps = [
   {
@@ -40,7 +47,9 @@ export default function FaceRitualSteps() {
                 <p className="font-sans text-base leading-body-kr text-brand-body mb-6">
                   {step.text}
                 </p>
-                <div className="aspect-[4/3] w-full bg-gradient-to-br from-brand-cream to-brand-beige rounded-sm" />
+                <div className="aspect-[4/3] w-full relative rounded-sm overflow-hidden">
+                  <Image src={stepImages[index]} alt={step.text} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                </div>
               </div>
             </AnimatedSection>
           ))}

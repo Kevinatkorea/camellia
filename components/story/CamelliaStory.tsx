@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function CamelliaStory() {
@@ -19,10 +20,14 @@ export default function CamelliaStory() {
         {/* Image juxtaposition — asymmetric grid */}
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6">
           <AnimatedSection>
-            <div className="aspect-[4/5] bg-gradient-to-br from-brand-beige to-brand-cream rounded-sm" />
+            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
+              <Image src="/images/story/story-narrative.webp" alt="동백 이야기" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+            </div>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <div className="aspect-[4/5] bg-gradient-to-br from-brand-cream to-brand-taupe/20 rounded-sm" />
+            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
+              <Image src="/images/story/story-ritual.webp" alt="리추얼 분위기" fill className="object-cover" sizes="(max-width: 768px) 100vw, 40vw" />
+            </div>
           </AnimatedSection>
         </div>
       </div>

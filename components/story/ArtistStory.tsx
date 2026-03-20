@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -17,7 +18,9 @@ export default function ArtistStory() {
         {/* Block 1: Image left 60% + Text right 40% */}
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center mb-20 md:mb-32">
           <AnimatedSection>
-            <div className="aspect-[4/5] bg-gradient-to-br from-brand-beige to-brand-cream rounded-sm" />
+            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
+              <Image src="/images/story/product-usage.webp" alt="아티스트 작업 과정" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+            </div>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="font-sans text-base leading-body-kr text-brand-body">
@@ -35,7 +38,9 @@ export default function ArtistStory() {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.2} className="order-1 md:order-2">
-            <div className="aspect-[4/5] bg-gradient-to-br from-brand-cream to-brand-beige rounded-sm" />
+            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
+              <Image src="/images/story/calm-beach.webp" alt="도자기 괄사의 평온함" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+            </div>
           </AnimatedSection>
         </div>
       </div>

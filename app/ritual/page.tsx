@@ -8,9 +8,12 @@ const SkincareBooster = dynamic(() => import("@/components/ritual/SkincareBooste
 const RitualCTA = dynamic(() => import("@/components/ritual/RitualCTA"));
 
 export const metadata = {
-  title: "리추얼 가이드",
+  title: "리추얼 가이드 — 5분 괄사 마사지",
   description:
-    "5분의 온도, 하루의 변화. SARAJOO 도자기 괄사로 시작하는 모닝·나이트 리추얼 가이드.",
+    "도자기 괄사(로즈괄사) 사용법. 모닝 쿨 리추얼로 붓기 완화, 나이트 핫 리추얼로 스킨케어 흡수. SARAJOO 5분 괄사 마사지 가이드.",
+  openGraph: {
+    images: [{ url: "/images/ritual/cool-water.webp", alt: "SARAJOO 괄사 리추얼 가이드" }],
+  },
 };
 
 export default function RitualPage() {

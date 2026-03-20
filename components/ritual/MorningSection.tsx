@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function MorningSection() {
@@ -14,9 +15,7 @@ export default function MorningSection() {
                 Morning Ritual
               </p>
               <h3 className="font-serif font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6">
-                아침을 깨우는
-                <br />
-                차가운 리듬
+                아침을 깨우는 차가운 리듬
               </h3>
               <p className="font-sans text-base leading-body-kr text-brand-body">
                 COOL 괄사를 냉동실에서 꺼내 세안 후 사용합니다. 붓기와 열감을
@@ -27,7 +26,9 @@ export default function MorningSection() {
 
           {/* Image placeholder — right 60% */}
           <AnimatedSection delay={0.2}>
-            <div className="aspect-[4/5] bg-gradient-to-br from-brand-cream to-brand-cool/20 rounded-sm" />
+            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
+              <Image src="/images/ritual/cool-water.webp" alt="COOL 괄사 모닝 리추얼" fill className="object-cover" sizes="(max-width: 768px) 100vw, 60vw" />
+            </div>
           </AnimatedSection>
         </div>
       </div>
