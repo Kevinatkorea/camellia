@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ─── */
+body {
+  color: #2c2c2c;
+  background: #f5f0eb;
+}
+
+/* ─── Noise Texture Overlay ─── */
+.noise-overlay::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  will-change: transform;
+}
+
+/* Disable noise on mobile for performance */
+@media (max-width: 768px) {
+  .noise-overlay::after {
+    display: none;
+  }
+}
+
+/* ─── Glassmorphism ─── */
+@layer components {
+  .glass {
+    @apply bg-white/85 backdrop-blur-md border border-brand-taupe/20;
+  }
+}
+
+/* Mobile: reduce blur intensity for performance */
+@media (max-width: 768px) {
+  .glass {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+}
+
+/* ─── Accessibility: Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Gallery Auto Scroll ─── */
+@keyframes gallery-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-auto-scroll {
+  animation: gallery-scroll 30s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .gallery-auto-scroll {
+    animation: none;
+  }
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(184, 152, 110, 0.3);
+}

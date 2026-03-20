@@ -1,0 +1,157 @@
+"use client";
+
+import { useState, useCallback } from "react";
+import * as m from "framer-motion/m";
+import { AnimatePresence } from "framer-motion";
+import CountUpNumber from "@/components/ui/CountUpNumber";
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import { SARAJOO_EASE, DURATION } from "@/lib/motion";
+
+const STATS = [
+  {
+    target: 1250,
+    suffix: "°C",
+    label: "고온 소성",
+    description: "일반 도자기 1,000°C 대비 250°C 높음",
+  },
+  {
+    target: 100,
+    suffix: "%",
+    label: "무독성 소재",
+  },
+  {
+    target: 48,
+    suffix: "h",
+    label: "온도 유지 시간",
+  },
+];
+
+const REVIEWS = [
+  {
+    quote: "아침 붓기가 확실히 줄었어요",
+    author: "30대 직장인 J님",
+  },
+  {
+    quote: "선물 받은 엄마가 매일 쓴대요",
+    author: "40대 사업가 M님",
+  },
+  {
+    quote: "피부 자극 없이 매끄러운 사용감",
+    author: "28세 뷰티블로거 S님",
+  },
+  {
+    quote: "예쁜 오브제 같아서 화장대에 두고 매일 써요",
+    author: "35세 디자이너 K님",
+  },
+];
+
+export default function SocialProof() {
+  const [currentReview, setCurrentReview] = useState(0);
+
+  const nextReview = useCallback(() => {
+    setCurrentReview((prev) => (prev + 1) % REVIEWS.length);
+  }, []);
+
+  const prevReview = useCallback(() => {
+    setCurrentReview((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length);
+  }, []);
+
+  return (
+    <section className="max-w-screen-xl mx-auto px-6 md:px-8">
+      {/* Stats */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-20 md:mb-32">
+        {STATS.map((stat) => (
+          <CountUpNumber
+            key={stat.label}
+            target={stat.target}
+            suffix={stat.suffix}
+            label={stat.label}
+            description={stat.description}
+          />
+        ))}
+      </div>
+
+      {/* Review Carousel */}
+      <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
+        <div className="relative min-h-[160px] flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <m.div
+              key={currentReview}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: DURATION.standard, ease: SARAJOO_EASE }}
+              className="text-center"
+            >
+              <p className="font-serif font-light italic text-xl md:text-2xl text-brand-dark leading-body-kr mb-4">
+                &ldquo;{REVIEWS[currentReview].quote}&rdquo;
+              </p>
+              <p className="font-sans text-sm text-brand-muted">
+                &mdash; {REVIEWS[currentReview].author}
+              </p>
+            </m.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Carousel Controls */}
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <button
+            onClick={prevReview}
+            className="font-sans text-sm text-brand-muted hover:text-brand-gold transition-colors p-2"
+            aria-label="이전 후기"
+          >
+            &larr;
+          </button>
+          <div className="flex gap-2">
+            {REVIEWS.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentReview(i)}
+                className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                  i === currentReview ? "bg-brand-gold" : "bg-brand-taupe/30"
+                }`}
+                aria-label={`후기 ${i + 1}번`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={nextReview}
+            className="font-sans text-sm text-brand-muted hover:text-brand-gold transition-colors p-2"
+            aria-label="다음 후기"
+          >
+            &rarr;
+          </button>
+        </div>
+      </AnimatedSection>
+
+      {/* Badges */}
+      <AnimatedSection delay={0.2} className="flex flex-wrap items-center justify-center gap-3 mb-16">
+        {["1,250°C 고온 소성", "100% 무독성", "아티스트 핸드메이드"].map(
+          (badge) => (
+            <span
+              key={badge}
+              className="border border-brand-taupe/30 rounded-full px-4 py-2 font-sans text-xs text-brand-muted"
+            >
+              {badge}
+            </span>
+          )
+        )}
+      </AnimatedSection>
+
+      {/* Kakao Contact */}
+      <AnimatedSection delay={0.3} className="text-center">
+        <p className="font-sans text-sm text-brand-muted mb-3">
+          궁금한 점이 있으신가요?
+        </p>
+        <a
+          href="https://pf.kakao.com/PLACEHOLDER"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 font-sans text-sm text-brand-gold hover:text-brand-dark transition-colors underline underline-offset-4 decoration-brand-gold"
+        >
+          카카오 채널에서 상담하기
+        </a>
+      </AnimatedSection>
+    </section>
+  );
+}
