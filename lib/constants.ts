@@ -1,1 +1,1 @@
-export const SHOP_URL = "https://www.lecormang.co.kr/product/sarajoo-%EA%B9%8C%EB%A9%9C%EB%A6%AC%EC%95%84-%EB%8F%84%EC%9E%90%EA%B8%B0-%EA%B4%84%EC%82%AC-%ED%95%AB%EC%BF%A8/7445/category/1/display/3/";
+export const SHOP_URL = "https://smartstore.naver.com/peeplan";
