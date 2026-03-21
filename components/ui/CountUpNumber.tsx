@@ -54,7 +54,7 @@ export default function CountUpNumber({
 
   return (
     <div ref={ref} className="text-center" aria-live="polite">
-      <div className="relative inline-flex items-center justify-center w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36">
+      <div className="relative inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
         <svg className="absolute inset-0" viewBox="0 0 100 100" aria-hidden="true">
           <m.circle
             cx="50"
@@ -70,7 +70,7 @@ export default function CountUpNumber({
             transition={{ duration: 2, ease: SARAJOO_EASE }}
           />
         </svg>
-        <div className="font-mono font-thin text-3xl sm:text-5xl md:text-7xl text-brand-dark tracking-wide">
+        <div className="font-mono font-thin text-2xl sm:text-3xl md:text-4xl text-brand-dark tracking-wide">
           <span>{displayValue}</span>
           {suffix}
         </div>
