@@ -60,7 +60,7 @@ export default function ProductHero() {
         )}
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-cream/80 to-brand-cream/60 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-cream/40 to-brand-cream/20 z-[2]" />
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl mx-auto">
