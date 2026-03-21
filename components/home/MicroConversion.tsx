@@ -19,7 +19,7 @@ export default function MicroConversion() {
           <CTAButton
             variant="secondary"
             external
-            href="https://instagram.com/sarajoo_official"
+            href="https://www.instagram.com/sarajoosj?igsh=MTFmNjAzbHc1MWN1cA=="
           >
             Instagram
           </CTAButton>

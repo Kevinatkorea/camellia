@@ -6,7 +6,7 @@ export default function JsonLd() {
     url: "https://sarajoo.com",
     logo: "https://sarajoo.com/images/hero/hero-main.jpg",
     description: "까멜리아 도자기 괄사 브랜드. 1,250°C 고온 소성 세라믹 괄사.",
-    sameAs: ["https://instagram.com/sarajoo_official"],
+    sameAs: ["https://www.instagram.com/sarajoosj?igsh=MTFmNjAzbHc1MWN1cA=="],
   };
 
   const productSchema = {

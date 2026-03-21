@@ -64,7 +64,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-2">
               <a
-                href="https://instagram.com/sarajoo_official"
+                href="https://www.instagram.com/sarajoosj?igsh=MTFmNjAzbHc1MWN1cA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-sans text-sm text-brand-body hover:text-brand-gold transition-colors"
