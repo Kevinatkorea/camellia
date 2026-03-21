@@ -24,7 +24,7 @@ export default function GalleryStrip() {
   const images = [...GALLERY_IMAGES, ...GALLERY_IMAGES];
 
   return (
-    <div className="relative overflow-hidden py-20 md:py-32">
+    <div className="relative overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none py-20 md:py-32">
       <button
         onClick={() => setIsPaused(!isPaused)}
         className="absolute top-4 right-4 z-10 font-display text-xs tracking-label uppercase text-brand-muted hover:text-brand-gold transition-colors hidden md:block"
@@ -34,7 +34,7 @@ export default function GalleryStrip() {
       </button>
 
       <div
-        className={`flex gap-4 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none ${isPaused ? "" : "gallery-auto-scroll"}`}
+        className={`flex gap-4 ${isPaused ? "" : "gallery-auto-scroll"}`}
         style={{ width: "fit-content" }}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
