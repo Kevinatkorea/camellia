@@ -25,15 +25,14 @@ export default function SkincareBooster() {
           </p>
         </AnimatedSection>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
+        <div className="hidden md:flex flex-row items-center justify-center gap-0">
           {boosterSteps.map((step, index) => (
             <AnimatedSection
               key={step.label}
               delay={index * 0.2}
-              className="flex items-center gap-6 md:gap-0"
+              className="flex items-center gap-0"
             >
               <div className="flex flex-col items-center gap-4">
-                {/* Circle icon */}
                 <div className="border-2 border-brand-gold rounded-full w-16 h-16 flex items-center justify-center">
                   <span className="font-mono font-thin text-xl text-brand-gold">
                     {step.icon}
@@ -44,12 +43,8 @@ export default function SkincareBooster() {
                 </p>
               </div>
 
-              {/* Dotted connector (not after last item) */}
               {index < boosterSteps.length - 1 && (
-                <div className="hidden md:block w-24 lg:w-32 border-t-2 border-dashed border-brand-gold/40 mx-6" />
-              )}
-              {index < boosterSteps.length - 1 && (
-                <div className="block md:hidden h-8 border-l-2 border-dashed border-brand-gold/40" />
+                <div className="w-24 lg:w-32 border-t-2 border-dashed border-brand-gold/40 mx-6" />
               )}
             </AnimatedSection>
           ))}
