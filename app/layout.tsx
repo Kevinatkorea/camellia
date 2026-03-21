@@ -38,7 +38,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sarajoo.com"),
+  metadataBase: new URL("https://kevinatkorea.github.io/camellia"),
   title: {
     default: "SARAJOO — 도자기 괄사 동백괄사 | 까멜리아 로즈괄사 핫앤쿨 세트",
     template: "%s | SARAJOO",
@@ -55,14 +55,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     siteName: "SARAJOO",
-    images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "SARAJOO 까멜리아 도자기 괄사" }],
+    images: [{ url: "https://kevinatkorea.github.io/camellia/images/og-image.png", width: 1200, height: 630, alt: "SARAJOO 까멜리아 도자기 괄사" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/og-image.png"],
+    images: ["https://kevinatkorea.github.io/camellia/images/og-image.png"],
   },
   alternates: {
-    canonical: "https://sarajoo.com",
+    canonical: "https://kevinatkorea.github.io/camellia",
   },
   robots: {
     index: true,
