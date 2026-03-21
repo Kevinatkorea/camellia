@@ -40,7 +40,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sarajoo.com"),
   title: {
-    default: "SARAJOO — 도자기 괄사 | 까멜리아 로즈괄사 핫앤쿨 세트",
+    default: "SARAJOO — 도자기 괄사 동백괄사 | 까멜리아 로즈괄사 핫앤쿨 세트",
     template: "%s | SARAJOO",
   },
   description:
