@@ -71,6 +71,7 @@ export default function Footer() {
               >
                 Instagram
               </a>
+              {/* 카카오 채널 준비 중
               <a
                 href="https://pf.kakao.com/PLACEHOLDER"
                 target="_blank"
@@ -79,6 +80,7 @@ export default function Footer() {
               >
                 카카오 채널
               </a>
+              */}
             </div>
           </div>
         </div>

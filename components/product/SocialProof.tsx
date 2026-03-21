@@ -162,7 +162,7 @@ export default function SocialProof() {
         )}
       </AnimatedSection>
 
-      {/* Kakao Contact */}
+      {/* Kakao Contact — 카카오 채널 준비 중
       <AnimatedSection delay={0.3} className="text-center">
         <p className="font-sans text-sm text-brand-muted mb-3">
           궁금한 점이 있으신가요?
@@ -176,6 +176,7 @@ export default function SocialProof() {
           카카오 채널에서 상담하기
         </a>
       </AnimatedSection>
+      */}
     </section>
   );
 }

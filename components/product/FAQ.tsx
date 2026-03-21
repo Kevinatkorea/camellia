@@ -65,6 +65,7 @@ export default function FAQ() {
           여전히 궁금한 점이 있으신가요?
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* 카카오 채널 준비 중
           <a
             href="https://pf.kakao.com/PLACEHOLDER"
             target="_blank"
@@ -74,6 +75,7 @@ export default function FAQ() {
             카카오 채널에서 상담하기
           </a>
           <span className="hidden sm:inline text-brand-taupe/30">|</span>
+          */}
           <a
             href="#social-proof"
             className="font-sans text-sm text-brand-body hover:text-brand-gold transition-colors underline underline-offset-4 decoration-brand-taupe/30"
