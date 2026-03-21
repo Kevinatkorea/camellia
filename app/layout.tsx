@@ -55,11 +55,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     siteName: "SARAJOO",
-    images: [{ url: "/images/hero/hero-main.jpg", width: 1920, height: 1080, alt: "SARAJOO 까멜리아 도자기 괄사" }],
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "SARAJOO 까멜리아 도자기 괄사" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/hero/hero-main.jpg"],
+    images: ["/images/og-image.png"],
   },
   alternates: {
     canonical: "https://sarajoo.com",
