@@ -10,10 +10,6 @@ const GALLERY_IMAGES = [
   { src: imgSrc("/images/gallery/gallery-3.jpg"), alt: "SARAJOO 갤러리 3" },
   { src: imgSrc("/images/gallery/gallery-4.jpg"), alt: "SARAJOO 갤러리 4" },
   { src: imgSrc("/images/gallery/gallery-5.jpg"), alt: "SARAJOO 갤러리 5" },
-  { src: imgSrc("/images/product/package-3d.jpg"), alt: "SARAJOO 패키지" },
-  { src: imgSrc("/images/product/pair-display.jpg"), alt: "SARAJOO 제품 페어" },
-  { src: imgSrc("/images/product/cool-render-1.jpg"), alt: "COOL 괄사" },
-  { src: imgSrc("/images/product/hot-render-1.jpg"), alt: "HOT 괄사" },
   { src: imgSrc("/images/product/package-flat.jpg"), alt: "SARAJOO 패키지 디자인" },
 ];
 
