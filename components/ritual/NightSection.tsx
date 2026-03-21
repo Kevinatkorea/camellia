@@ -52,6 +52,10 @@ export default function NightSection() {
                   <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
                   저녁 스킨케어 루틴의 마지막 단계로 최적
                 </li>
+                <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
+                  <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
+                  클렌징 전 사용 시 모공 속 노폐물 정돈에 도움
+                </li>
               </ul>
             </div>
           </AnimatedSection>

@@ -91,7 +91,7 @@ export default function Footer() {
             <p>주소: 서울시 강동구 양재대로 1615 | 고객센터: 010-4723-2500</p>
             <p className="mt-2">
               © {new Date().getFullYear()} SARAJOO. All rights reserved. |
-              특허 출원 중
+              특허 출원 [10-2025-0131819]
             </p>
           </div>
         </div>

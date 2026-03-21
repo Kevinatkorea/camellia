@@ -55,6 +55,22 @@ export default function FaceRitualSteps() {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* 상세 리추얼 플로우 */}
+        <AnimatedSection delay={0.3} className="mt-16">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-center">
+            {["손", "귀 뒤 림프선", "목·어깨", "턱선", "광대 아래", "눈가"].map((step, i, arr) => (
+              <span key={step} className="flex items-center gap-3">
+                <span className="font-sans text-sm text-brand-body border border-brand-taupe/30 rounded-full px-4 py-2">
+                  {step}
+                </span>
+                {i < arr.length - 1 && (
+                  <span className="text-brand-gold text-xs">→</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

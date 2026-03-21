@@ -41,6 +41,14 @@ export default function MorningSection() {
                   <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
                   세안 후 에센스와 함께 5분 사용
                 </li>
+                <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
+                  <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
+                  메이크업 전 사용 시 모공 정돈으로 화장 밀착력 향상
+                </li>
+                <li className="flex items-start gap-2 font-sans text-sm text-brand-body">
+                  <span className="w-1 h-1 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
+                  온열 마사지 후 냉찜 마무리로 리프팅 효과 유지
+                </li>
               </ul>
             </div>
           </AnimatedSection>

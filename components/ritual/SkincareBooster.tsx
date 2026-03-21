@@ -16,9 +16,13 @@ export default function SkincareBooster() {
           <p className="font-display text-xs tracking-label uppercase text-brand-muted mb-2 text-center">
             Skincare Booster
           </p>
-          <h3 className="font-serif-kr font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-16 text-center">
+          <h3 className="font-serif-kr font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6 text-center">
             스킨케어 부스터
           </h3>
+          <p className="font-sans text-base leading-body-kr text-brand-body max-w-2xl mx-auto text-center mb-16">
+            오일·에센스·밤 등 기초 스킨케어와 함께 사용하면
+            깊은 온열 효과로 흡수와 밀착이 자연스럽게 높아집니다.
+          </p>
         </AnimatedSection>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">

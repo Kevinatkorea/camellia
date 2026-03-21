@@ -22,7 +22,7 @@ const STATS = [
     label: "무독성 소재",
   },
   {
-    target: 20,
+    target: 15,
     suffix: "분",
     label: "온도 유지 시간",
   },
