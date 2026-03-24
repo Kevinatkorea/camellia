@@ -11,9 +11,9 @@ import { imgSrc } from "@/lib/image-path";
 const BADGES = ["특허출원", "무독성", "핸드크래프트"];
 
 const HERO_IMAGES = [
-  imgSrc("/images/product/hero-model-1.png"),
-  imgSrc("/images/product/hero-model-2.png"),
-  imgSrc("/images/product/hero-model-3.png"),
+  { src: imgSrc("/images/product/hero-model-1.png"), position: "center" },
+  { src: imgSrc("/images/product/hero-model-2.png"), position: "center" },
+  { src: imgSrc("/images/product/hero-model-3.png"), position: "center 15%" },
 ];
 
 export default function ProductHero() {
@@ -32,10 +32,11 @@ export default function ProductHero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
       {/* Base image */}
       <Image
-        src={HERO_IMAGES[0]}
+        src={HERO_IMAGES[0].src}
         alt="SARAJOO 까멜리아 도자기 괄사"
         fill
         className="object-cover"
+        style={{ objectPosition: HERO_IMAGES[0].position }}
         priority
       />
 
@@ -51,10 +52,11 @@ export default function ProductHero() {
             className="absolute inset-0 z-[1]"
           >
             <Image
-              src={HERO_IMAGES[current]}
+              src={HERO_IMAGES[current].src}
               alt="SARAJOO 까멜리아 도자기 괄사"
               fill
               className="object-cover"
+              style={{ objectPosition: HERO_IMAGES[current].position }}
             />
           </m.div>
         )}

@@ -1,12 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
+import * as m from "framer-motion/m";
+import { AnimatePresence } from "framer-motion";
 import { SHOP_URL } from "@/lib/constants";
+import { SARAJOO_EASE } from "@/lib/motion";
+
+const PRODUCTS = [
+  { label: "핫 & 쿨 세트", originalPrice: "130,000원", salePrice: "91,000원" },
+  { label: "단품", originalPrice: "65,000원", salePrice: "52,000원" },
+];
 
 export default function FloatingCTA() {
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
+  const [currentProduct, setCurrentProduct] = useState(0);
 
   useEffect(() => {
     if (pathname !== "/product") return;
@@ -20,7 +29,19 @@ export default function FloatingCTA() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
+  const nextProduct = useCallback(() => {
+    setCurrentProduct((prev) => (prev + 1) % PRODUCTS.length);
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    const timer = setInterval(nextProduct, 4000);
+    return () => clearInterval(timer);
+  }, [isVisible, nextProduct]);
+
   if (pathname !== "/product") return null;
+
+  const product = PRODUCTS[currentProduct];
 
   return (
     <div
@@ -32,13 +53,27 @@ export default function FloatingCTA() {
       }}
     >
       <div className="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
-        <div className="hidden sm:block">
-          <p className="font-sans text-sm font-medium text-brand-dark">
-            SARAJOO 까멜리아 도자기 괄사
-          </p>
-          <p className="font-sans text-xs text-brand-muted">
-            핫 & 쿨 세트 · <span className="line-through text-brand-muted/60">130,000원</span> 91,000원
-          </p>
+        <div className="hidden sm:block relative overflow-hidden h-10">
+          <AnimatePresence mode="wait">
+            <m.div
+              key={currentProduct}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.4, ease: SARAJOO_EASE }}
+            >
+              <p className="font-sans text-sm font-medium text-brand-dark">
+                SARAJOO 까멜리아 도자기 괄사
+              </p>
+              <p className="font-sans text-xs text-brand-muted">
+                {product.label} ·{" "}
+                <span className="line-through text-brand-muted/60">
+                  {product.originalPrice}
+                </span>{" "}
+                {product.salePrice}
+              </p>
+            </m.div>
+          </AnimatePresence>
         </div>
         <a
           href={SHOP_URL}
