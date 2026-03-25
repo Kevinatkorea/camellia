@@ -3,27 +3,7 @@
 import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { imgSrc } from "@/lib/image-path";
-
-const stepImages = [
-  imgSrc("/images/ritual/model-face-1.jpg"),
-  imgSrc("/images/ritual/model-cheek.jpg"),
-  imgSrc("/images/ritual/leg-usage.jpg"),
-];
-
-const steps = [
-  {
-    number: "01",
-    text: "세안 후 에센스 도포",
-  },
-  {
-    number: "02",
-    text: "괄사를 턱 라인→관자놀이 방향으로 슬라이드",
-  },
-  {
-    number: "03",
-    text: "이마, 눈 주변을 부드럽게 마사지",
-  },
-];
+import { RITUAL_STEPS } from "@/lib/data/ritual-steps";
 
 export default function FaceRitualSteps() {
   return (
@@ -39,7 +19,7 @@ export default function FaceRitualSteps() {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {steps.map((step, index) => (
+          {RITUAL_STEPS.map((step, index) => (
             <AnimatedSection key={step.number} delay={index * 0.15}>
               <div className="flex flex-col items-center text-center">
                 <span className="font-mono font-thin text-4xl text-brand-gold mb-6">
@@ -49,7 +29,7 @@ export default function FaceRitualSteps() {
                   {step.text}
                 </p>
                 <div className="aspect-[4/3] w-full relative rounded-sm overflow-hidden">
-                  <Image src={stepImages[index]} alt={step.text} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={imgSrc(step.image)} alt={step.text} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
               </div>
             </AnimatedSection>

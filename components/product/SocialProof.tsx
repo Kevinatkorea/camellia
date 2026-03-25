@@ -8,6 +8,7 @@ import CountUpNumber from "@/components/ui/CountUpNumber";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { SARAJOO_EASE, DURATION } from "@/lib/motion";
 import { imgSrc } from "@/lib/image-path";
+import { REVIEWS } from "@/lib/data/reviews";
 
 const STATS = [
   {
@@ -28,43 +29,20 @@ const STATS = [
   },
 ];
 
-const REVIEWS = [
-  {
-    quote: "디자인도 이쁜데 그립감도 좋아서 매일 쓰고 있어요",
-    author: "박민**** · ★★★★★",
-    image: "/images/reviews/review-1.jpg",
-  },
-  {
-    quote: "너무 너무 좋네요♥ 감사합니다",
-    author: "한혜**** · ★★★★★",
-    image: "/images/reviews/review-2.jpg",
-  },
-  {
-    quote: "공구 또 언제 하나요? 너무 좋아서 선물하고 싶어요",
-    author: "박주**** · ★★★★★",
-    image: "/images/reviews/review-3.jpg",
-  },
-  {
-    quote: "시원한 느낌이 기분좋아요. 아침마다 쓰고 있어요",
-    author: "김연**** · ★★★★★",
-    image: "/images/reviews/review-4.jpg",
-  },
-  {
-    quote: "열심히 써보고 있어요. 촉감이 매끄럽고 좋습니다",
-    author: "신은**** · ★★★★",
-    image: "/images/reviews/review-5.jpg",
-  },
-];
+const REVIEWS_DISPLAY = REVIEWS.map((r) => ({
+  ...r,
+  author: `${r.author} · ${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}`,
+}));
 
 export default function SocialProof() {
   const [currentReview, setCurrentReview] = useState(0);
 
   const nextReview = useCallback(() => {
-    setCurrentReview((prev) => (prev + 1) % REVIEWS.length);
+    setCurrentReview((prev) => (prev + 1) % REVIEWS_DISPLAY.length);
   }, []);
 
   const prevReview = useCallback(() => {
-    setCurrentReview((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length);
+    setCurrentReview((prev) => (prev - 1 + REVIEWS_DISPLAY.length) % REVIEWS_DISPLAY.length);
   }, []);
 
   return (
@@ -97,7 +75,7 @@ export default function SocialProof() {
               {/* Review Image */}
               <div className="w-32 h-32 md:w-40 md:h-40 relative rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-gold/20">
                 <Image
-                  src={imgSrc(REVIEWS[currentReview].image)}
+                  src={imgSrc(REVIEWS_DISPLAY[currentReview].image)}
                   alt="사용 후기"
                   fill
                   className="object-cover"
@@ -107,10 +85,10 @@ export default function SocialProof() {
               {/* Review Text */}
               <div className="text-center md:text-left">
                 <p className="font-serif-kr font-light text-xl md:text-2xl text-brand-dark leading-body-kr mb-4">
-                  &ldquo;{REVIEWS[currentReview].quote}&rdquo;
+                  &ldquo;{REVIEWS_DISPLAY[currentReview].quote}&rdquo;
                 </p>
                 <p className="font-sans text-sm text-brand-muted">
-                  &mdash; {REVIEWS[currentReview].author}
+                  &mdash; {REVIEWS_DISPLAY[currentReview].author}
                 </p>
               </div>
             </m.div>
@@ -127,7 +105,7 @@ export default function SocialProof() {
             &larr;
           </button>
           <div className="flex gap-2">
-            {REVIEWS.map((_, i) => (
+            {REVIEWS_DISPLAY.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentReview(i)}

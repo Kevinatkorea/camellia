@@ -33,9 +33,9 @@ export default function ProcessTimeline() {
           <p className="font-display text-xs tracking-label uppercase text-brand-muted mb-2">
             Process
           </p>
-          <h3 className="font-serif font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading">
+          <h2 className="font-serif font-light text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading">
             제작 프로세스
-          </h3>
+          </h2>
         </AnimatedSection>
 
         {/* Timeline container */}

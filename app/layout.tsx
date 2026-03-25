@@ -6,6 +6,8 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import MetaPixel from "@/components/layout/MetaPixel";
 import MotionProvider from "@/components/layout/MotionProvider";
 import JsonLd from "@/components/layout/JsonLd";
+import EventPopup from "@/components/layout/EventPopup";
+import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -38,7 +40,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kevinatkorea.github.io/camellia"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "SARAJOO — 도자기 괄사 동백괄사 | 까멜리아 로즈괄사 핫앤쿨 세트",
     template: "%s | SARAJOO",
@@ -50,19 +52,20 @@ export const metadata: Metadata = {
     "괄사 마사지", "페이스 리프팅", "붓기 완화", "괄사 사용법",
     "핫앤쿨 괄사", "SARAJOO", "사라주", "뷰티 괄사",
     "핸드메이드 괄사", "스킨케어 도구", "페이스 마사지",
+    "동백괄사", "세라믹 뷰티", "온도 리추얼",
   ],
   openGraph: {
     type: "website",
     locale: "ko_KR",
     siteName: "SARAJOO",
-    images: [{ url: "https://kevinatkorea.github.io/camellia/images/og-image.png", width: 1200, height: 630, alt: "SARAJOO 까멜리아 도자기 괄사" }],
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "SARAJOO 까멜리아 도자기 괄사" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://kevinatkorea.github.io/camellia/images/og-image.png"],
+    images: ["/images/og-image.png"],
   },
   alternates: {
-    canonical: "https://kevinatkorea.github.io/camellia",
+    canonical: "/",
   },
   robots: {
     index: true,
@@ -74,6 +77,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  other: {
+    "naver-site-verification": "",
   },
 };
 
@@ -101,6 +107,7 @@ export default function RootLayout({
           <Navigation />
           {children}
           <FloatingCTA />
+          <EventPopup />
           <Footer />
         </MotionProvider>
       </body>

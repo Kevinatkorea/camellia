@@ -13,7 +13,7 @@ const BADGES = ["특허출원", "무독성", "핸드크래프트"];
 const HERO_IMAGES = [
   { src: imgSrc("/images/product/hero-model-1.png"), position: "center" },
   { src: imgSrc("/images/product/hero-model-2.png"), position: "center" },
-  { src: imgSrc("/images/product/hero-model-3.png"), position: "center 15%" },
+  { src: imgSrc("/images/product/hero-model-3.png"), position: "center 30%" },
 ];
 
 export default function ProductHero() {

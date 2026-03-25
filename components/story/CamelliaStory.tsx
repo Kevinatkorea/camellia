@@ -9,9 +9,9 @@ export default function CamelliaStory() {
       <div className="max-w-screen-xl mx-auto px-6 md:px-8">
         {/* Text */}
         <AnimatedSection className="mb-16 text-center md:text-left">
-          <h3 className="font-serif-kr font-light italic text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6">
+          <h2 className="font-serif-kr font-light italic text-2xl md:text-4xl tracking-serif-wide text-brand-dark leading-heading mb-6">
             동백, 겨울에 피는 꽃.
-          </h3>
+          </h2>
           <p className="font-sans text-base leading-body-kr text-brand-body max-w-2xl mb-6">
             동백(까멜리아)은 가장 추운 겨울에 피어나는 꽃입니다.
             차가운 바람 속에서도 고요한 아름다움을 지키는 동백처럼,
